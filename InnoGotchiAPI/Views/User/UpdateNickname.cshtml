@@ -1,0 +1,20 @@
+﻿@model UpdateNicknameModel
+
+<h2>Введите id пользователя и его измененный никнейм</h2>
+<form method="post" asp-controller="User" asp-action="UpdateNickname">
+    <div>
+        <div>
+            <label asp-for="Id"></label><br />
+            <input type="number" asp-for="Id" />
+            <span asp-validation-for="Id"></span>
+        </div>
+
+        <div>
+            <label asp-for="Nickname"></label><br />
+            <input type="text" asp-for="Nickname" />
+            <span asp-validation-for="Nickname"></span>
+        </div>
+
+        <input type="submit" value="Изменить никнейм пользователя" />
+    </div>
+</form> 

@@ -1,0 +1,18 @@
+﻿@model List<UserViewModel>
+
+<h2>Список всех никнеймов:</h2>
+@foreach (var userViewModel in Model)
+{
+    var nickname = userViewModel.Nickname;
+    <div>@nickname</div>
+    <p>
+        <form method="post" asp-controller="User" asp-action="DelitNicknameById">
+            <div>
+                <input style="display: none;" type="number" name="id" value="@userViewModel.Id" />
+            </div>
+            <div>
+                <input type="submit" value="Удалить никнейм" />
+            </div>
+        </form>
+    </p>
+}

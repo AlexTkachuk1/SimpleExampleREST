@@ -1,0 +1,11 @@
+﻿@model RegistrationViewModel
+
+<h2>Регистрация нового пользователя</h2>
+<form method="post" asp-controller="User" asp-action="Register">
+    <div>
+        <label asp-for="Nickname"></label><br />
+        <input type="text" asp-for="Nickname" />
+        <span asp-validation-for="Nickname"></span>
+        <input type="submit" value="Добавить никнейм" />
+    </div>
+</form> 

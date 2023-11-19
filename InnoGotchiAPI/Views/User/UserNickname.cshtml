@@ -1,0 +1,11 @@
+﻿@model UserViewModel
+
+<h2>Никнейм искомого пользователя:</h2>
+@if (Model != null)
+{
+    <div>@Model.Nickname</div>
+}
+else
+{
+    <div>Пользователь с данным ID не зарегистрирован.</div>
+}
